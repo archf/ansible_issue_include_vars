@@ -1,0 +1,6 @@
+---
+
+- hosts: localhost
+
+  roles:
+    - test_include_vars_role

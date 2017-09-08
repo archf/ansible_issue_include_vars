@@ -1,0 +1,15 @@
+---
+
+- hosts: localhost
+
+  tasks:
+
+  - name: test include vars
+    include_vars:
+      dir: "{{my_dir}}"
+      ignore_files: ".gitkeep"
+    vars:
+      my_dir: "{{playbook_dir}}/my_vars"
+
+  - debug: var=foo
+  - debug: var=bar
